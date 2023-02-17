@@ -3,7 +3,7 @@
 // @namespace    http://tampermonkey.net/
 // @version      0.1
 // @description  Add copy file content to message.
-// @author       You
+// @author       Tung
 // @match        *://discord.com/channels/*
 // @grant        none
 // ==/UserScript==
