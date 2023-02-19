@@ -1,15 +1,16 @@
 // ==UserScript==
 // @name         Copy File Content
 // @namespace    http://tampermonkey.net/
-// @version      0.1
+// @version      0.2
 // @description  Add copy file content to message.
 // @author       Tung
-// @match        *://discord.com/channels/*
+// @match        *://discord.com/*
 // @grant        none
 // ==/UserScript==
 
 (function() {
 window.setInterval(()=>{
+if(!location.href.includes("/channels/"))return
 let messageAction = document.querySelectorAll("div[aria-label='Message Actions']>div");
 for(let i of messageAction){
     if(!i.querySelector("#cmc")){
